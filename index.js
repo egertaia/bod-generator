@@ -47,7 +47,7 @@ const run = async () => {
             }
 
             if (details.resourceFolder && !files.directoryExists(resourceNewFolder)) {
-                console.log(chalk.blue(`Created folder: ${newFolder}`));
+                console.log(chalk.blue(`Created folder: ${resourceNewFolder}`));
                 files.createDirectory(newFolresourceNewFolderder);
             }
             currentFolder = newFolder;
