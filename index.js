@@ -13,9 +13,8 @@ console.log(
     )
 );
 
-const run = async () => {
+const run = async() => {
     const details = await inquirer.askPluginDetails();
-    console.log(details);
 
     if (!files.directoryExists(details.sourceFolder)) {
         console.error(chalk.redBright('Source folder doesnt exist!'));
@@ -31,6 +30,8 @@ const run = async () => {
     files.createDirectory(componentDirectory);
 
     const generatedTemplates = templates.map((template) => template(details));
+    if (details.improvedTimeout) require('./templates/choices/timeout/improved').map((template) => generatedTemplates.push(template(details)));
+    else require('./templates/choices/timeout/basic').map((template) => generatedTemplates.push(template(details)));
 
     console.log(chalk.blueBright('Generating folder structure'));
     generatedTemplates.forEach((template) => {
@@ -60,16 +61,16 @@ const run = async () => {
         console.log(chalk.green(`Created file: ${fileName}`));
     });
 
-    if (details.addToSettings){
+    if (details.addToSettings) {
         files.addSettings(details.sourceFolder, details.settingsFile, details.pluginName);
-    } 
+    }
 
     console.log(
         chalk.yellow(
             figlet.textSync('FINISHED', { horizontalLayout: 'full' })
         )
     );
-    
+
     console.log(chalk.yellowBright('Now go and start writing your plugins mate.'))
     console.log(chalk.yellowBright('Make sure you add "java" folder as Source and "resources" as Resource in IntelliJ.'))
     console.log(chalk.yellowBright('Written by bod'))
