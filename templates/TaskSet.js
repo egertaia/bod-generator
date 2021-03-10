@@ -2,7 +2,7 @@ module.exports = (details) => ({
     name: 'TaskSet',
     extensions: 'java',
     path: `src.main.java.${details.folderStructure}.${details.pluginName.toLowerCase()}`,
-    content: `package net.runelite.client.plugins.${details.pluginName};
+    content: `package net.runelite.client.plugins.${details.pluginName.toLowerCase()};
 
 import java.util.ArrayList;
 import java.util.Arrays;
