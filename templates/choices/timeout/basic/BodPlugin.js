@@ -24,7 +24,7 @@ import net.runelite.client.eventbus.Subscribe;
 import net.runelite.client.plugins.Plugin;
 import net.runelite.client.plugins.PluginDependency;
 import net.runelite.client.plugins.PluginDescriptor;
-import ${details.breakhandler.toLowerCase() === 'bodUtils' ? details.folderStructure : `com.owain`}.${details.breakhandler.toLowerCase()}.${details.breakhandler};
+import ${details.breakhandler.toLowerCase() === 'bodutils' ? details.folderStructure : `com.owain`}.${details.breakhandler.toLowerCase()}.${details.breakhandler};
 import ${details.folderStructure}.${details.pluginName.toLowerCase()}.tasks.MovingTask;
 import ${details.folderStructure}.${details.pluginName.toLowerCase()}.tasks.TimeoutTask;
 import ${details.folderStructure}.${details.utils.toLowerCase()}.${details.utils};
