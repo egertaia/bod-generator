@@ -196,7 +196,7 @@ public interface ${details.pluginName}Config extends Config
         name = "",
         description = "Instructions. Don't enter anything into this field",
         position = 1,
-        title = "instructionsTitle"
+        section = "instructionsTitle"
     )
     default String instructions()
     {
