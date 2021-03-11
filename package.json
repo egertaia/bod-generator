@@ -1,6 +1,6 @@
 {
   "name": "bod-generator",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generates an empty Task Plugin for you",
   "main": "index.js",
   "scripts": {
